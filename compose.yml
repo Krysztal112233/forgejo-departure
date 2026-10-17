@@ -1,0 +1,26 @@
+# Forgejo latest (v17 major tag) with the retro theme bind-mounted in.
+# Built for podman-compose; should also work with docker compose.
+#
+#   pnpm build          # produce dist/ first — it is the mounted assets dir
+#   pnpm up             # start on http://localhost:3030
+#
+# CSS-only changes need just a browser hard refresh; app.ini changes need
+# `podman-compose restart`.
+services:
+  forgejo:
+    image: codeberg.org/forgejo/forgejo:17
+    container_name: forgejo-retro
+    restart: unless-stopped
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    volumes:
+      - forgejo-data:/data
+      - ./forgejo/app.ini:/data/gitea/conf/app.ini:Z
+      - ./dist:/data/gitea/public/assets:Z
+    ports:
+      - "3030:3000"
+      - "2222:22"
+
+volumes:
+  forgejo-data:
