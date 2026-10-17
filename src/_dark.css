@@ -14,7 +14,8 @@
   --border-radius-full: 0px;
 
   /* effect vars consumed by _effects.css */
-  --px-ink: #000000;
+  /* borders read as ink lines on night: #000 is invisible (1.2:1) */
+  --px-ink: #6f6e63;
   --px-shade: rgba(0, 0, 0, 0.45);
   --px-focus: var(--color-spark);
   --px-spark: var(--color-spark);
@@ -209,20 +210,20 @@
   --color-text: var(--color-bone);
   --color-text-light: #a6a59b;
   --color-text-light-1: #9a998e;
-  --color-text-light-2: #8f8e84;
+  --color-text-light-2: #9a998e;
   --color-text-light-3: #7a796f;
   --color-footer: #121210;
   --color-timeline: #3a3a33;
   --color-input-text: #d4d3c7;
   --color-input-background: #262622;
   --color-input-toggle-background: #262622;
-  --color-input-border: #4a4941;
-  --color-input-border-hover: #5c5b50;
+  --color-input-border: #74736a;
+  --color-input-border-hover: #7d7c70;
   --color-header-wrapper: #1e1e1a;
   --color-header-wrapper-transparent: #1e1e1a00;
   --color-light: #00000028;
   --color-light-mimic-enabled: rgba(201, 200, 187, 0.12);
-  --color-light-border: #ffffff28;
+  --color-light-border: #6f6e63;
   --color-hover: #c9c8bb18;
   --color-active: #2e2e28;
   --color-menu: var(--color-night-panel);

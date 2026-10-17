@@ -138,6 +138,27 @@ body {
   box-shadow: none !important;
   background: transparent !important;
 }
+/* <details> dropdowns (repo action menus, the watch picker) are popovers too.
+   Upstream paints them with --color-body, i.e. the page colour, behind a 1px
+   --color-secondary edge - the whole panel sinks into the page. */
+details.dropdown > .content {
+  background: var(--color-box-body) !important;
+  border: 2px solid var(--px-ink) !important;
+  box-shadow: 4px 4px 0 0 var(--px-shade) !important;
+}
+/* upstream outlines checkboxes and radios with --color-secondary-dark-4, which
+   the night palette maps to the page colour (#191916) - the box disappears */
+:is(form, .markup) input[type="checkbox"],
+:is(form, .markup) input[type="radio"] {
+  border-color: var(--color-input-border) !important;
+}
+
+/* upstream colours help text with --color-secondary-dark-8, which on this
+   night palette lands at #0d0d0b - invisible on the page */
+.form .help,
+.dashboard .help {
+  color: var(--color-text-light-2) !important;
+}
 /* active sidebar item: pale-amber card, same voice as active tabs.
    Forgejo paints its own active tint via an absolutely-positioned ::before
    overlay — kill it so the amber shows through */
@@ -185,6 +206,23 @@ body {
   background-color: var(--color-accent);
   color: var(--color-box-body);
   text-decoration: none;
+}
+
+/* speech-bubble arrows: two CSS triangles pointing at the avatar. Next to the
+   square ink frame they read as a stray notch hanging off the panel corner.
+   Upstream attaches the same pair to comment headers, reply forms, commit
+   forms and no-header merge sections. */
+.comment-header::before,
+.comment-header::after,
+.comment.form .content::before,
+.comment.form .content::after,
+.comment.form .content .form::before,
+.comment.form .content .form::after,
+.commit-form::before,
+.commit-form::after,
+.merge-section.no-header::before,
+.merge-section.no-header::after {
+  content: none !important;
 }
 
 /* amber focus ring — keyboard navigation stays visible */
