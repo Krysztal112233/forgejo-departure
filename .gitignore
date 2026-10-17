@@ -1,0 +1,17 @@
+# dependencies and build output
+node_modules/
+dist/
+
+# local instance config — holds per-instance secrets, see forgejo/app.ini.example
+forgejo/app.ini
+
+# local overrides
+.env
+.env.*
+*.local
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
