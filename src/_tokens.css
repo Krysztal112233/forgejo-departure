@@ -1,0 +1,42 @@
+/*
+ * Retro "departure" design tokens — single source of truth.
+ * Tailwind v4 CSS-first: only the theme layer is imported (no preflight,
+ * no utilities) so the emitted stylesheet stays a pure override layer.
+ */
+@import "tailwindcss/theme.css";
+
+@theme {
+  /* departure light — faded industrial paper */
+  --color-paper: #f2f1ea; /* panel */
+  --color-paper-dim: #e9e8df; /* page */
+  --color-paper-soft: #eae9e2; /* raised surface */
+  --color-paper-mute: #c9c8bc; /* muted surface */
+  --color-paper-edge: #a3a295; /* hairline on paper */
+  --color-ink: #444444; /* structural ink */
+  --color-ink-deep: #2b2b28; /* emphasis ink */
+  --color-ink-soft: #67665e; /* secondary ink */
+  --color-spark: #ffa133; /* the rare utility spark */
+  --color-spark-ink: #9a4a00; /* spark as text on paper (5.5:1) */
+
+  /* departure dark — night terminal */
+  --color-night: #191916; /* page */
+  --color-night-deep: #121210; /* sunken */
+  --color-night-panel: #22221e; /* panel */
+  --color-night-soft: #262622; /* raised surface */
+  --color-night-mute: #3a3a33; /* muted surface */
+  --color-night-edge: #4a4941; /* hairline on night */
+  --color-bone: #c9c8bb; /* ink on night */
+  --color-bone-bright: #e6e5db; /* emphasis on night */
+  --color-bone-dim: #8f8e84; /* secondary on night (5.0:1) */
+
+  /* semantic hues on paper */
+  --color-stop: #b33f26;
+  --color-caution: #9d5317;
+  --color-go: #357440;
+  --color-signal: #4a6a7d;
+  /* semantic hues on night */
+  --color-stop-night: #d96a4f;
+  --color-caution-night: #d98a3d;
+  --color-go-night: #6ea06f;
+  --color-signal-night: #7d97a6;
+}

@@ -1,0 +1,284 @@
+/* departure light — faded industrial paper mapped onto Forgejo's variables */
+:root {
+  color-scheme: light;
+
+  /* everything on the mono grid */
+  --fonts-override: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fonts-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* pixel-flat: no radii anywhere */
+  --border-radius: 0px;
+  --border-radius-medium: 0px;
+  --border-radius-large: 0px;
+  --border-radius-full: 0px;
+
+  /* effect vars consumed by _effects.css */
+  --px-ink: var(--color-ink);
+  --px-shade: rgba(68, 68, 68, 0.22);
+  --px-focus: var(--color-spark-ink);
+  --px-spark: var(--color-spark);
+  --px-grid: rgba(68, 68, 68, 0.07);
+
+  /* primary = structural ink */
+  --color-primary: var(--color-ink);
+  --color-primary-contrast: var(--color-paper);
+  --color-primary-dark-1: #3a3a36;
+  --color-primary-dark-2: #30302c;
+  --color-primary-dark-3: #282825;
+  --color-primary-dark-4: #1f1f1d;
+  --color-primary-light-1: #565651;
+  --color-primary-light-2: #67665e;
+  --color-primary-light-3: #7a796f;
+  --color-primary-light-4: #8f8e84;
+  --color-primary-light-5: #a6a59b;
+  --color-primary-light-6: #c9c8bc;
+  --color-primary-light-7: #e6e5db;
+  --color-primary-alpha-10: #44444419;
+  --color-primary-alpha-20: #44444433;
+  --color-primary-alpha-30: #4444444b;
+  --color-primary-alpha-40: #44444466;
+  --color-primary-alpha-50: #44444480;
+  --color-primary-alpha-60: #44444499;
+  --color-primary-alpha-70: #444444b3;
+  --color-primary-alpha-80: #444444cc;
+  --color-primary-alpha-90: #444444e1;
+  --color-primary-hover: var(--color-primary-dark-2);
+  --color-primary-active: var(--color-primary-dark-4);
+
+  /* secondary = paper scale */
+  --color-secondary: #e4e3d9;
+  --color-secondary-dark-1: #dcdbd0;
+  --color-secondary-dark-2: #d0cfc3;
+  --color-secondary-dark-3: #d0cfc3;
+  --color-secondary-dark-4: #c9c8bc;
+  --color-secondary-dark-5: #b3b2a6;
+  --color-secondary-dark-6: #a3a295;
+  --color-secondary-dark-7: #8f8e84;
+  --color-secondary-dark-8: #7a796f;
+  --color-secondary-dark-9: #67665e;
+  --color-secondary-dark-10: #565651;
+  --color-secondary-dark-11: #565651;
+  --color-secondary-dark-12: #444440;
+  --color-secondary-dark-13: #444440;
+  --color-secondary-light-1: #ecebe2;
+  --color-secondary-light-2: #f2f1ea;
+  --color-secondary-light-3: #f7f6f1;
+  --color-secondary-light-4: #faf9f5;
+  --color-secondary-alpha-10: #d0cfc319;
+  --color-secondary-alpha-20: #d0cfc333;
+  --color-secondary-alpha-30: #d0cfc34b;
+  --color-secondary-alpha-40: #d0cfc366;
+  --color-secondary-alpha-50: #d0cfc380;
+  --color-secondary-alpha-60: #d0cfc399;
+  --color-secondary-alpha-70: #d0cfc3b3;
+  --color-secondary-alpha-80: #d0cfc3cc;
+  --color-secondary-alpha-90: #d0cfc3e1;
+  --color-secondary-hover: var(--color-secondary-dark-2);
+  --color-secondary-active: var(--color-secondary-dark-4);
+
+  /* console: always the dark terminal, both themes */
+  --color-console-fg: #e8e7dc;
+  --color-console-fg-subtle: #9a998e;
+  --color-console-bg: #1c1c18;
+  --color-console-border: #3a3a33;
+  --color-console-hover-bg: #ffffff16;
+  --color-console-active-bg: #454540;
+  --color-console-menu-bg: #2a2a25;
+  --color-console-menu-border: #4a4941;
+
+  /* semantic colors on paper */
+  --color-red: var(--color-stop);
+  --color-orange: var(--color-caution);
+  --color-yellow: #8a6d03;
+  --color-olive: #6b7a12;
+  --color-green: var(--color-go);
+  --color-teal: #0f7a6e;
+  --color-blue: var(--color-signal);
+  --color-violet: #6d4a86;
+  --color-purple: #7a3a8c;
+  --color-pink: #a83a6b;
+  --color-brown: #8a6a52;
+  --color-grey: #67665e;
+  --color-black: #1e1e1c;
+  /* light variants */
+  --color-red-light: #cf5a40;
+  --color-orange-light: #d98a3d;
+  --color-yellow-light: #a8880a;
+  --color-olive-light: #83931b;
+  --color-green-light: #479355;
+  --color-teal-light: #179385;
+  --color-purple-light: #9453a7;
+  --color-pink-light: #c15285;
+  --color-brown-light: #a1806a;
+  --color-grey-light: #7a796f;
+  --color-black-light: #333330;
+  /* dark variants */
+  --color-red-dark-1: #a03820;
+  --color-orange-dark-1: #ab5b1b;
+  --color-yellow-dark-1: #755c02;
+  --color-olive-dark-1: #59660e;
+  --color-green-dark-1: #2b6335;
+  --color-teal-dark-1: #0c675d;
+  --color-violet-dark-1: #5c3d72;
+  --color-purple-dark-1: #673077;
+  --color-pink-dark-1: #8f315b;
+  --color-brown-dark-1: #755945;
+  --color-black-dark-1: #141412;
+  --color-red-dark-2: #8a301b;
+  --color-orange-dark-2: #944e16;
+  --color-yellow-dark-2: #614c02;
+  --color-olive-dark-2: #49530b;
+  --color-green-dark-2: #22522b;
+  --color-teal-dark-2: #0a544c;
+  --color-violet-dark-2: #4c315f;
+  --color-purple-dark-2: #552762;
+  --color-pink-dark-2: #77284c;
+  --color-brown-dark-2: #614a39;
+  --color-black-dark-2: #000000;
+
+  /* ansi palette for the console windows */
+  --color-ansi-black: #1c1c18;
+  --color-ansi-red: #c25a41;
+  --color-ansi-green: #7ba05b;
+  --color-ansi-yellow: #c2961f;
+  --color-ansi-blue: #5f8496;
+  --color-ansi-magenta: #a8547d;
+  --color-ansi-cyan: #3f9089;
+  --color-ansi-white: var(--color-console-fg-subtle);
+  --color-ansi-bright-black: #454540;
+  --color-ansi-bright-red: #d96a4f;
+  --color-ansi-bright-green: #93b373;
+  --color-ansi-bright-yellow: #d9a83d;
+  --color-ansi-bright-blue: #7d97a6;
+  --color-ansi-bright-magenta: #bf6a94;
+  --color-ansi-bright-cyan: #55aba3;
+  --color-ansi-bright-white: var(--color-console-fg);
+
+  /* other named colors */
+  --color-gold: #8a731f;
+  --color-white: #ffffff;
+
+  /* diffs on paper */
+  --color-diff-removed-word-bg: #e5b3a6;
+  --color-diff-added-word-bg: #b3cfa0;
+  --color-diff-removed-row-bg: #f2ddd7;
+  --color-diff-moved-row-bg: #f2ead0;
+  --color-diff-added-row-bg: #dee8cf;
+  --color-diff-removed-row-border: #d1917d;
+  --color-diff-moved-row-border: #d3ba6a;
+  --color-diff-added-row-border: #93b67d;
+  --color-diff-inactive: #ecebe2;
+
+  /* alert triplets */
+  --color-error-border: #d9a493;
+  --color-error-bg: #f2ddd7;
+  --color-error-bg-active: #dfae9f;
+  --color-error-bg-hover: #e9c9bf;
+  --color-error-text: #6e2311;
+  --color-success-border: #a3c69c;
+  --color-success-bg: #d8e7d2;
+  --color-success-text: #1d4526;
+  --color-warning-border: #dfc27f;
+  --color-warning-bg: #f2e6cd;
+  --color-warning-text: #59310b;
+  --color-info-border: #a7bfcb;
+  --color-info-bg: #d9e4ea;
+  --color-info-text: #24404f;
+
+  /* badges */
+  --color-red-badge: var(--color-stop);
+  --color-red-badge-bg: #b33f2622;
+  --color-red-badge-hover-bg: #b33f2644;
+  --color-green-badge: var(--color-go);
+  --color-green-badge-bg: #35744022;
+  --color-green-badge-hover-bg: #35744044;
+  --color-yellow-badge: #8a6d03;
+  --color-yellow-badge-bg: #8a6d0322;
+  --color-yellow-badge-hover-bg: #8a6d0344;
+  --color-orange-badge: var(--color-caution);
+  --color-orange-badge-bg: #c2691f22;
+  --color-orange-badge-hover-bg: #c2691f44;
+
+  /* target-based colors */
+  --color-body: var(--color-paper-dim);
+  --color-box-header: #e4e3d7;
+  --color-box-body: var(--color-paper);
+  --color-box-body-highlight: #e2e1d5;
+  --color-text-dark: #1e1e1c;
+  --color-text: #333330;
+  --color-text-light: #55554f;
+  --color-text-light-1: #67665e;
+  --color-text-light-2: #7a796f;
+  --color-text-light-3: #8f8e84;
+  --color-footer: #e0dfd3;
+  --color-timeline: #c9c8bc;
+  --color-input-text: #2b2b28;
+  --color-input-background: #f7f6f1;
+  --color-input-toggle-background: #f7f6f1;
+  --color-input-border: #a3a295;
+  --color-input-border-hover: #7a796f;
+  --color-header-wrapper: #f2f1ea;
+  --color-header-wrapper-transparent: #f2f1ea00;
+  --color-light: #ffffffcc;
+  --color-light-mimic-enabled: rgba(0, 0, 0, 0.15);
+  --color-light-border: #44444426;
+  --color-hover: #44444414;
+  --color-active: #e2e1d5;
+  --color-menu: var(--color-paper);
+  --color-card: var(--color-paper);
+  --fancy-card-bg: #eae9e0;
+  --fancy-card-border: #d6d5c9;
+  --color-markup-table-row: #44444408;
+  --color-markup-code-block: #eae9de;
+  --color-markup-code-inline: #e0dfd2;
+  --color-button: #e9e8df;
+  --color-code-bg: var(--color-paper);
+  --color-shadow: #44444440;
+  --color-secondary-bg: #e4e3d9;
+  --color-text-focus: #f2f1ea;
+  --color-expand-button: #d6d5c9;
+  --color-placeholder-text: var(--color-text-light-3);
+  --color-editor-line-highlight: #eae9e0;
+  --color-project-board-bg: var(--color-secondary-light-2);
+  --color-project-board-dark-label: var(--color-text-light-3);
+  --color-caret: var(--color-text);
+  --color-reaction-bg: #4444440a;
+  --color-reaction-active-bg: var(--color-primary-alpha-20);
+  --color-reaction-hover-bg: var(--color-primary-alpha-30);
+  --color-tooltip-text: #f2f1ea;
+  --color-tooltip-bg: #2b2b28f0;
+  --color-nav-bg: #e4e3d7;
+  --color-nav-hover-bg: #c9c8bc;
+  --color-secondary-nav-bg: var(--color-body);
+  --color-label-text: var(--color-text);
+  --color-label-bg: #4444442b;
+  --color-label-hover-bg: #44444448;
+  --color-label-active-bg: #44444466;
+  --color-label-bg-alt: #44444466;
+  --color-accent: var(--color-spark-ink);
+  --color-small-accent: #ffe3bd;
+  --color-highlight-fg: #b35c00;
+  --color-highlight-bg: #ffedd6;
+  --color-overlay-backdrop: #2b2b28c0;
+  --color-selection-bg: var(--color-ink);
+  --color-selection-fg: var(--color-paper);
+  --checkerboard-color-1: #f2f1ea;
+  --checkerboard-color-2: #e0dfd3;
+  --color-indicator-offline: #67665e;
+  --color-indicator-offline-20: #67665e33;
+  --color-indicator-idle: var(--color-go);
+  --color-indicator-idle-20: #35744033;
+  --color-indicator-active: var(--color-spark-ink);
+  --color-indicator-active-20: #9a4a0033;
+  accent-color: var(--color-accent);
+}
+
+/* contribution heatmap: amber ramp. Upstream renders cells with inline
+   `fill: var(--color-primary*)` styles — a grey ramp in this theme, and in
+   dark it inverts into white/black artifacts. Override per level via the
+   inline-style substring (`--color-primary);` with paren = the bare var). */
+.vch__container rect[style*="--color-primary-light-4"] { fill: #f3d8a4 !important; }
+.vch__container rect[style*="--color-primary-light-2"] { fill: #edba6a !important; }
+.vch__container rect[style*="--color-primary);"]       { fill: #e59632 !important; }
+.vch__container rect[style*="--color-primary-dark-2"]  { fill: #c2740f !important; }
+.vch__container rect[style*="--color-primary-dark-4"]  { fill: #8f5200 !important; }

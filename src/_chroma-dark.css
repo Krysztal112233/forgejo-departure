@@ -1,0 +1,30 @@
+/* chroma syntax palette on night — mirrors web_src/css/chroma/dark.css classes,
+ * re-hued to the departure night tokens */
+.chroma .bp { color: var(--color-bone-dim); }
+.chroma .c, .chroma .c1, .chroma .ch, .chroma .cm, .chroma .cs { color: var(--color-text-light-2); font-style: italic; }
+.chroma .cp, .chroma .cpf { color: var(--color-signal-night); }
+.chroma .dl { color: var(--color-go-night); }
+.chroma .err, .chroma .gr, .chroma .gt { color: var(--color-stop-night); }
+.chroma .fm { color: var(--color-bone-bright); font-weight: 700; }
+.chroma .gd { color: var(--color-error-text); background-color: var(--color-error-bg); }
+.chroma .ge { font-style: italic; }
+.chroma .gh, .chroma .gu { color: var(--color-text-light-1); font-weight: 700; }
+.chroma .gi { color: var(--color-success-text); background-color: var(--color-success-bg); }
+.chroma .go, .chroma .gp { color: var(--color-text-light-2); }
+.chroma .gs { font-weight: 700; }
+.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr { color: var(--color-spark); font-weight: 700; } /* Keywords: amber on night */
+.chroma .kt { color: var(--color-signal-night); }
+.chroma .l, .chroma .ld { color: var(--color-caution-night); }
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .mo, .chroma .il { color: var(--color-caution-night); }
+.chroma .n, .chroma .na, .chroma .nl, .chroma .nx { color: inherit; }
+.chroma .nb { color: var(--color-teal); }
+.chroma .nc, .chroma .no { color: var(--color-signal-night); }
+.chroma .nd { color: var(--color-violet); }
+.chroma .ne, .chroma .nf { color: var(--color-bone-bright); font-weight: 700; }
+.chroma .ni { color: var(--color-purple); }
+.chroma .nn { color: var(--color-signal-night); }
+.chroma .nt { color: var(--color-purple); }
+.chroma .nv, .chroma .vc, .chroma .vg, .chroma .vi, .chroma .vm { color: var(--color-bone-bright); }
+.chroma .o, .chroma .ow, .chroma .p, .chroma .py { color: var(--color-bone); }
+.chroma .s, .chroma .s1, .chroma .s2, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .sd, .chroma .se, .chroma .sh, .chroma .si, .chroma .sr, .chroma .ss, .chroma .sx { color: var(--color-go-night); }
+.chroma .w { color: var(--color-text-light-3); }

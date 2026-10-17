@@ -1,0 +1,5 @@
+/* theme-retro-auto — light by default, night terminal when the OS goes dark.
+ * Same conditional-import mechanism as Forgejo's own theme-forgejo-auto.css. */
+@import "./theme-retro-light.css";
+@import "./_dark.css" (prefers-color-scheme: dark);
+@import "./_chroma-dark.css" (prefers-color-scheme: dark);

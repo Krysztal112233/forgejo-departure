@@ -1,0 +1,30 @@
+/* chroma syntax palette on paper — mirrors web_src/css/chroma/light.css classes,
+ * re-hued to the departure tokens */
+.chroma .bp { color: var(--color-ink-soft); } /* NameBuiltinPseudo */
+.chroma .c, .chroma .c1, .chroma .ch, .chroma .cm, .chroma .cs { color: var(--color-text-light-2); font-style: italic; } /* Comments */
+.chroma .cp, .chroma .cpf { color: var(--color-signal); } /* CommentPreproc */
+.chroma .dl { color: var(--color-go); } /* LiteralStringDelimiter */
+.chroma .err, .chroma .gr, .chroma .gt { color: var(--color-stop); } /* Errors */
+.chroma .fm { color: var(--color-ink-deep); font-weight: 700; } /* NameFunctionMagic */
+.chroma .gd { color: var(--color-error-text); background-color: var(--color-error-bg); } /* GenericDeleted */
+.chroma .ge { font-style: italic; } /* GenericEmph */
+.chroma .gh, .chroma .gu { color: var(--color-text-light-1); font-weight: 700; } /* GenericHeading/Subheading */
+.chroma .gi { color: var(--color-success-text); background-color: var(--color-success-bg); } /* GenericInserted */
+.chroma .go, .chroma .gp { color: var(--color-text-light-2); } /* GenericOutput/Prompt */
+.chroma .gs { font-weight: 700; } /* GenericStrong */
+.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr { color: var(--color-spark-ink); font-weight: 700; } /* Keywords: the amber voice */
+.chroma .kt { color: var(--color-signal); } /* KeywordType */
+.chroma .l, .chroma .ld { color: var(--color-caution); } /* Literals */
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .mo, .chroma .il { color: var(--color-caution); } /* Numbers */
+.chroma .n, .chroma .na, .chroma .nl, .chroma .nx { color: inherit; } /* Names: plain text */
+.chroma .nb { color: var(--color-teal); } /* NameBuiltin */
+.chroma .nc, .chroma .no { color: var(--color-signal); } /* NameClass/Constant */
+.chroma .nd { color: var(--color-violet); } /* NameDecorator */
+.chroma .ne, .chroma .nf { color: var(--color-ink-deep); font-weight: 700; } /* NameException/Function */
+.chroma .ni { color: var(--color-purple); } /* NameEntity */
+.chroma .nn { color: var(--color-signal); } /* NameNamespace */
+.chroma .nt { color: var(--color-purple); } /* NameTag */
+.chroma .nv, .chroma .vc, .chroma .vg, .chroma .vi, .chroma .vm { color: var(--color-ink-deep); } /* Variables */
+.chroma .o, .chroma .ow, .chroma .p, .chroma .py { color: var(--color-ink); } /* Operators/Punctuation */
+.chroma .s, .chroma .s1, .chroma .s2, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .sd, .chroma .se, .chroma .sh, .chroma .si, .chroma .sr, .chroma .ss, .chroma .sx { color: var(--color-go); } /* Strings */
+.chroma .w { color: var(--color-text-light-3); } /* TextWhitespace */
