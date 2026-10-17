@@ -1,4 +1,4 @@
-# Forgejo latest (v17 major tag) with the retro theme bind-mounted in.
+# Forgejo latest (v17 major tag) with the departure theme bind-mounted in.
 # Built for podman-compose; should also work with docker compose.
 #
 #   pnpm build          # produce dist/ first — it is the mounted assets dir
@@ -9,7 +9,7 @@
 services:
   forgejo:
     image: codeberg.org/forgejo/forgejo:17
-    container_name: forgejo-retro
+    container_name: forgejo-departure
     restart: unless-stopped
     environment:
       - USER_UID=1000

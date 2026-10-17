@@ -1,9 +1,9 @@
 {
-  "name": "forgejo-retro",
+  "name": "forgejo-departure",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Departure-board retro theme for Forgejo — Tailwind v4 tokens + Vite build, validated in a container",
+  "description": "Departure-board theme for Forgejo — Tailwind v4 tokens + Vite build, validated in a container",
   "license": "MIT",
   "packageManager": "pnpm@11.15.1",
   "engines": {

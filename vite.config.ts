@@ -11,9 +11,9 @@ export default defineConfig({
     outDir: "dist",
     rollupOptions: {
       input: {
-        "theme-retro-light": "src/theme-retro-light.css",
-        "theme-retro-dark": "src/theme-retro-dark.css",
-        "theme-retro-auto": "src/theme-retro-auto.css",
+        "theme-departure-light": "src/theme-departure-light.css",
+        "theme-departure-dark": "src/theme-departure-dark.css",
+        "theme-departure-auto": "src/theme-departure-auto.css",
       },
       output: {
         assetFileNames: (assetInfo) =>

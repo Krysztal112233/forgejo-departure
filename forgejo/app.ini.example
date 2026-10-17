@@ -41,8 +41,8 @@ SSL_MODE = disable
 LOG_SQL = false
 
 [ui]
-THEMES = forgejo-auto,forgejo-light,forgejo-dark,gitea-auto,gitea-light,gitea-dark,retro-auto,retro-light,retro-dark
-DEFAULT_THEME = retro-auto
+THEMES = forgejo-auto,forgejo-light,forgejo-dark,gitea-auto,gitea-light,gitea-dark,departure-auto,departure-light,departure-dark
+DEFAULT_THEME = departure-auto
 
 [service]
 ; open on a fresh instance so the first registered user becomes admin;
