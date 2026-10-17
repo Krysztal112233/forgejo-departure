@@ -6,22 +6,22 @@
  */
 
 html {
-	image-rendering: pixelated;
+  image-rendering: pixelated;
 }
 
 /* the one remaining radius source: hardcoded fomantic corners */
 *,
 *::before,
 *::after {
-	border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 /* graph-paper grid on the page body (--px-grid set per theme) */
 body {
-	background-image:
-		linear-gradient(var(--px-grid) 1px, transparent 1px),
-		linear-gradient(90deg, var(--px-grid) 1px, transparent 1px);
-	background-size: 22px 22px;
+  background-image:
+    linear-gradient(var(--px-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--px-grid) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
 /* display type: uppercase with wider tracking — the departures-board voice */
@@ -31,16 +31,16 @@ body {
 .ui.button,
 .ui.tabs .item,
 .repository .ui.header .label {
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* panels keep the box; menus are nav STRIPS, not boxes */
 .ui.segment,
 .ui.card,
 .ui.cards > .card {
-	border: 2px solid var(--px-ink) !important;
-	box-shadow: 5px 5px 0 0 var(--px-shade) !important;
+  border: 2px solid var(--px-ink) !important;
+  box-shadow: 5px 5px 0 0 var(--px-shade) !important;
 }
 /* fused attached stacks: every piece casts the full offset shadow — the
    down-component of each piece hides behind its flush follower's opaque
@@ -48,70 +48,70 @@ body {
    join seamlessly (piece N's rail ends 5px past the seam = where N+1's starts) */
 .ui.segment.attached,
 .ui.segment[class*="attached"] {
-	box-shadow: 5px 5px 0 0 var(--px-shade) !important;
+  box-shadow: 5px 5px 0 0 var(--px-shade) !important;
 }
 .ui.segment.attached + .ui.segment.attached,
 .ui.segment[class*="attached"] + .ui.segment[class*="attached"] {
-	border-top: none !important;
+  border-top: none !important;
 }
 /* tab strip inside a top-attached piece: the strip's own baseline becomes the
    single full-width seam; the segment's bottom border steps aside */
 .ui.segment.top.attached:has(> overflow-menu.tabular),
 .ui.segment.top.attached:has(> .ui.tabular.menu) {
-	border-bottom: none !important;
-	padding-bottom: 0 !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
 .ui.segment.top.attached > overflow-menu.tabular,
 .ui.segment.top.attached > .ui.tabular.menu {
-	margin: 0 -1em;
-	border-bottom: 2px solid var(--px-ink) !important;
+  margin: 0 -1em;
+  border-bottom: 2px solid var(--px-ink) !important;
 }
 /* active tab = visible pale-amber card sitting on the seam (amber base).
    No negative-margin poke: the overflow-menu is a scroll container with
    overflow:auto — any protrusion past its content box spawns a scrollbar. */
 .ui.segment.top.attached .tabular.menu .item.active,
 .ui.segment.top.attached .tabular.menu .item.active:hover {
-	background: var(--color-small-accent) !important;
-	border-bottom-color: var(--px-spark) !important;
+  background: var(--color-small-accent) !important;
+  border-bottom-color: var(--px-spark) !important;
 }
 /* segment GROUPS: the box lives on the group, children keep only hairline separators */
 .ui.segments {
-	border: 2px solid var(--px-ink) !important;
-	box-shadow: 5px 5px 0 0 var(--px-shade) !important;
+  border: 2px solid var(--px-ink) !important;
+  box-shadow: 5px 5px 0 0 var(--px-shade) !important;
 }
 .ui.segments > .ui.segment {
-	border: none !important;
-	box-shadow: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 .ui.segments > .ui.segment + .ui.segment {
-	border-top: 1px solid var(--px-shade) !important;
+  border-top: 1px solid var(--px-shade) !important;
 }
 .ui.horizontal.segments > .ui.segment + .ui.segment {
-	border-top: none !important;
-	border-left: 1px solid var(--px-shade) !important;
+  border-top: none !important;
+  border-left: 1px solid var(--px-shade) !important;
 }
 .ui.table {
-	border: 2px solid var(--px-ink) !important;
+  border: 2px solid var(--px-ink) !important;
 }
 /* the banner: one continuous strip with an ink baseline, content stays aligned */
 #navbar {
-	border-bottom: 2px solid var(--px-ink) !important;
-	box-shadow: none;
+  border-bottom: 2px solid var(--px-ink) !important;
+  box-shadow: none;
 }
 .ui.menu:not(.vertical),
 .ui.tabular.menu:not(.vertical),
 .ui.secondary.menu:not(.vertical) {
-	border: none !important;
-	box-shadow: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 /* tab strips speak with a baseline rule */
 .ui.tabular.menu:not(.vertical),
 .ui.pointing.menu:not(.vertical),
 .secondary-nav {
-	border-bottom: 2px solid var(--px-ink) !important;
+  border-bottom: 2px solid var(--px-ink) !important;
 }
 .secondary-nav {
-	border-color: var(--px-ink) !important;
+  border-color: var(--px-ink) !important;
 }
 /* dropdown popups: one departure box on the OUTER popup only.
    Forgejo wraps items in an inner `.items.menu` scroller that also matches
@@ -119,49 +119,49 @@ body {
    .visible variant raises specificity over upstream's soft-shadow !important. */
 .ui.dropdown .menu,
 .ui.dropdown .menu.visible {
-	border: 2px solid var(--px-ink) !important;
-	box-shadow: 4px 4px 0 0 var(--px-shade) !important;
+  border: 2px solid var(--px-ink) !important;
+  box-shadow: 4px 4px 0 0 var(--px-shade) !important;
 }
 .ui.dropdown .menu > .menu {
-	border: none !important;
-	box-shadow: none !important;
-	background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 /* vertical menus are sidebar panels, not strips: they get the box treatment */
 .ui.vertical.menu {
-	border: 2px solid var(--px-ink) !important;
-	box-shadow: 5px 5px 0 0 var(--px-shade) !important;
-	background: var(--color-box-body) !important;
+  border: 2px solid var(--px-ink) !important;
+  box-shadow: 5px 5px 0 0 var(--px-shade) !important;
+  background: var(--color-box-body) !important;
 }
 .ui.dropdown .ui.vertical.menu {
-	border: none !important;
-	box-shadow: none !important;
-	background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 /* active sidebar item: pale-amber card, same voice as active tabs.
    Forgejo paints its own active tint via an absolutely-positioned ::before
    overlay — kill it so the amber shows through */
 .ui.vertical.menu .active.item {
-	background: var(--color-small-accent) !important;
+  background: var(--color-small-accent) !important;
 }
 .ui.vertical.menu .item::before {
-	content: none !important;
+  content: none !important;
 }
 .ui.modal > .header,
 .ui.modal > .content,
 .ui.modal > .actions {
-	border-color: var(--px-ink) !important;
+  border-color: var(--px-ink) !important;
 }
 .ui.modal > .content {
-	box-shadow: 6px 6px 0 0 var(--px-shade);
+  box-shadow: 6px 6px 0 0 var(--px-shade);
 }
 
 /* flat rectangular buttons with a hard shadow that presses in */
 .ui.button {
-	box-shadow: 3px 3px 0 0 var(--px-shade) !important;
+  box-shadow: 3px 3px 0 0 var(--px-shade) !important;
 }
 .ui.button:hover {
-	box-shadow: 4px 4px 0 0 var(--px-shade) !important;
+  box-shadow: 4px 4px 0 0 var(--px-shade) !important;
 }
 /* pressed button: shadow collapses and the face slides onto the shadow.
    Dropdown toggle buttons are excluded: the open state keeps .active, and the
@@ -169,34 +169,34 @@ body {
    the button, letting later content paint over the menu */
 .ui.button:active:not(.dropdown),
 .ui.button.active:not(.dropdown) {
-	transform: translate(2px, 2px);
-	box-shadow: none !important;
+  transform: translate(2px, 2px);
+  box-shadow: none !important;
 }
 
 /* content links: accent ink, inverted on hover */
 .markup a,
 .comment .content a {
-	color: var(--color-accent);
-	text-decoration: underline;
-	text-underline-offset: 3px;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .markup a:hover,
 .comment .content a:hover {
-	background-color: var(--color-accent);
-	color: var(--color-box-body);
-	text-decoration: none;
+  background-color: var(--color-accent);
+  color: var(--color-box-body);
+  text-decoration: none;
 }
 
 /* amber focus ring — keyboard navigation stays visible */
 :focus-visible {
-	outline: 2px solid var(--px-focus) !important;
-	outline-offset: 1px;
+  outline: 2px solid var(--px-focus) !important;
+  outline-offset: 1px;
 }
 
 /* selection follows the theme */
 ::selection {
-	background: var(--color-selection-bg);
-	color: var(--color-selection-fg);
+  background: var(--color-selection-bg);
+  color: var(--color-selection-fg);
 }
 
 /* code views: a touch larger than Forgejo's 12px default */
@@ -206,106 +206,106 @@ body {
 .lines-code,
 .code-inner,
 .cm-content {
-	font-size: 14px;
-	line-height: 22px;
+  font-size: 14px;
+  line-height: 22px;
 }
 /* line numbers render via ::after pinned at 20px !important upstream —
    re-attach them to the theme's rhythm so numbers and code stay aligned */
 .lines-num span::after {
-	line-height: inherit !important;
+  line-height: inherit !important;
 }
 
 /* stack-top file headers (README header etc.) join the panel treatment:
    full 2px border + offset shadow; its down-strip hides behind the flush
    segment below (later DOM sibling paints over it) */
 .ui.top.attached.header {
-	border: 2px solid var(--px-ink) !important;
-	box-shadow: 5px 5px 0 0 var(--px-shade) !important;
+  border: 2px solid var(--px-ink) !important;
+  box-shadow: 5px 5px 0 0 var(--px-shade) !important;
 }
 .ui.top.attached.header + .ui.bottom.attached.segment {
-	border-top: none !important;
+  border-top: none !important;
 }
 
 /* repo file search bar + file table form one stack */
 .code-search {
-	border: 2px solid var(--px-ink) !important;
-	border-bottom: none !important;
-	box-shadow: 5px 5px 0 0 var(--px-shade) !important;
+  border: 2px solid var(--px-ink) !important;
+  border-bottom: none !important;
+  box-shadow: 5px 5px 0 0 var(--px-shade) !important;
 }
 /* pin the action row to an integer height: fomantic's em-derived paddings
    leave the input/dropdown/button bottom edges 0.5px apart, which renders
    as a visible step at 1x devicePixelRatio */
 .code-search .ui.action.input {
-	height: 38px;
+  height: 38px;
 }
 .code-search .ui.action.input > input,
 .code-search .ui.action.input > .ui.dropdown,
 .code-search .ui.action.input > .ui.button {
-	height: 100%;
-	box-sizing: border-box;
-	margin-top: 0;
-	margin-bottom: 0;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* standalone tables are panels too (tables inside an already-boxed
    panel stay flat) */
 .ui.table {
-	box-shadow: 5px 5px 0 0 var(--px-shade);
+  box-shadow: 5px 5px 0 0 var(--px-shade);
 }
 .ui.segment .ui.table,
 .ui.card .ui.table {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 /* tippy tooltips: floating panels get the full departure treatment.
    Upstream uses --color-body (= page bg) which makes the tip invisible
    against the page, and in dark mode the text contrast collapses entirely */
 .tippy-box {
-	background-color: var(--color-box-body) !important;
-	color: var(--color-text) !important;
-	border: 2px solid var(--px-ink) !important;
-	box-shadow: 4px 4px 0 0 var(--px-shade) !important;
+  background-color: var(--color-box-body) !important;
+  color: var(--color-text) !important;
+  border: 2px solid var(--px-ink) !important;
+  box-shadow: 4px 4px 0 0 var(--px-shade) !important;
 }
 .tippy-arrow {
-	color: var(--color-box-body) !important;
+  color: var(--color-box-body) !important;
 }
 
 /* thin square scrollbars */
 * {
-	scrollbar-width: thin;
-	scrollbar-color: var(--px-ink) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: var(--px-ink) transparent;
 }
 
 /* language-color signals (repo stats bar, legend icons, explore dots): keep the hue, lose the neon */
 stats-bar .slice,
 details.stats .color-icon,
 .repo-language-color {
-	filter: saturate(0.45);
+  filter: saturate(0.45);
 }
 
 /* blinking block cursor after the navbar brand — the departure board is alive */
 @keyframes retro-blink {
-	0%,
-	49% {
-		opacity: 1;
-	}
-	50%,
-	100% {
-		opacity: 0;
-	}
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 #navbar-logo::after {
-	content: "";
-	display: inline-block;
-	width: 0.55em;
-	height: 1em;
-	margin-inline-start: 0.35em;
-	vertical-align: text-bottom;
-	background: var(--color-accent);
-	animation: retro-blink 1.06s steps(1) infinite;
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-inline-start: 0.35em;
+  vertical-align: text-bottom;
+  background: var(--color-accent);
+  animation: retro-blink 1.06s steps(1) infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-	#navbar-logo::after {
-		animation: none;
-	}
+  #navbar-logo::after {
+    animation: none;
+  }
 }
