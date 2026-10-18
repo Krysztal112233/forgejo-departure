@@ -4,8 +4,10 @@
   color-scheme: dark;
 
   /* everything on the mono grid */
-  --fonts-override: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --fonts-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fonts-override:
+    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fonts-monospace:
+    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* pixel-flat: no radii anywhere */
   --border-radius: 0px;
@@ -276,8 +278,18 @@
 }
 
 /* contribution heatmap: amber ramp on night — more activity burns brighter */
-.vch__container rect[style*="--color-primary-light-4"] { fill: #5c3f14 !important; }
-.vch__container rect[style*="--color-primary-light-2"] { fill: #8a5c17 !important; }
-.vch__container rect[style*="--color-primary);"]       { fill: #c88a1f !important; }
-.vch__container rect[style*="--color-primary-dark-2"]  { fill: #ffa133 !important; }
-.vch__container rect[style*="--color-primary-dark-4"]  { fill: #ffc266 !important; }
+.vch__container rect[style*="--color-primary-light-4"] {
+  fill: #5c3f14 !important;
+}
+.vch__container rect[style*="--color-primary-light-2"] {
+  fill: #8a5c17 !important;
+}
+.vch__container rect[style*="--color-primary);"] {
+  fill: #c88a1f !important;
+}
+.vch__container rect[style*="--color-primary-dark-2"] {
+  fill: #ffa133 !important;
+}
+.vch__container rect[style*="--color-primary-dark-4"] {
+  fill: #ffc266 !important;
+}

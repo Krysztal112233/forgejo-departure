@@ -3,8 +3,10 @@
   color-scheme: light;
 
   /* everything on the mono grid */
-  --fonts-override: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --fonts-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fonts-override:
+    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fonts-monospace:
+    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* pixel-flat: no radii anywhere */
   --border-radius: 0px;
@@ -277,8 +279,18 @@
    `fill: var(--color-primary*)` styles — a grey ramp in this theme, and in
    dark it inverts into white/black artifacts. Override per level via the
    inline-style substring (`--color-primary);` with paren = the bare var). */
-.vch__container rect[style*="--color-primary-light-4"] { fill: #f3d8a4 !important; }
-.vch__container rect[style*="--color-primary-light-2"] { fill: #edba6a !important; }
-.vch__container rect[style*="--color-primary);"]       { fill: #e59632 !important; }
-.vch__container rect[style*="--color-primary-dark-2"]  { fill: #c2740f !important; }
-.vch__container rect[style*="--color-primary-dark-4"]  { fill: #8f5200 !important; }
+.vch__container rect[style*="--color-primary-light-4"] {
+  fill: #f3d8a4 !important;
+}
+.vch__container rect[style*="--color-primary-light-2"] {
+  fill: #edba6a !important;
+}
+.vch__container rect[style*="--color-primary);"] {
+  fill: #e59632 !important;
+}
+.vch__container rect[style*="--color-primary-dark-2"] {
+  fill: #c2740f !important;
+}
+.vch__container rect[style*="--color-primary-dark-4"] {
+  fill: #8f5200 !important;
+}

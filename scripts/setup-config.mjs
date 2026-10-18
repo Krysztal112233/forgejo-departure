@@ -20,46 +20,55 @@ const target = join(root, "forgejo/app.ini");
 const template = join(root, "forgejo/app.ini.example");
 
 if (existsSync(target)) {
-	console.log("forgejo/app.ini exists — leaving it untouched.");
-	process.exit(0);
+  console.log("forgejo/app.ini exists — leaving it untouched.");
+  process.exit(0);
 }
 
 const runtime = ["podman", "docker"].find((bin) => {
-	try {
-		execFileSync(bin, ["--version"], { stdio: "ignore" });
-		return true;
-	} catch {
-		return false;
-	}
+  try {
+    execFileSync(bin, ["--version"], { stdio: "ignore" });
+    return true;
+  } catch {
+    return false;
+  }
 });
 
 if (!runtime) {
-	console.error(
-		"No podman or docker found. Generating app.ini needs a container runtime\n" +
-			"for `forgejo generate secret`. Install one, or copy forgejo/app.ini.example\n" +
-			"to forgejo/app.ini and fill each {{GENERATE}} marker manually with:\n\n" +
-			`  ${IMAGE} → forgejo generate secret INTERNAL_TOKEN | JWT_SECRET | LFS_JWT_SECRET\n`,
-	);
-	process.exit(1);
+  console.error(
+    "No podman or docker found. Generating app.ini needs a container runtime\n" +
+      "for `forgejo generate secret`. Install one, or copy forgejo/app.ini.example\n" +
+      "to forgejo/app.ini and fill each {{GENERATE}} marker manually with:\n\n" +
+      `  ${IMAGE} → forgejo generate secret INTERNAL_TOKEN | JWT_SECRET | LFS_JWT_SECRET\n`,
+  );
+  process.exit(1);
 }
 
 const secret = (kind) =>
-	execFileSync(
-		runtime,
-		["run", "--rm", "--entrypoint", "forgejo", IMAGE, "generate", "secret", kind],
-		{ encoding: "utf8" },
-	).trim();
+  execFileSync(
+    runtime,
+    [
+      "run",
+      "--rm",
+      "--entrypoint",
+      "forgejo",
+      IMAGE,
+      "generate",
+      "secret",
+      kind,
+    ],
+    { encoding: "utf8" },
+  ).trim();
 
 const kinds = ["INTERNAL_TOKEN", "JWT_SECRET", "LFS_JWT_SECRET"];
 const secrets = Object.fromEntries(kinds.map((kind) => [kind, secret(kind)]));
 
 let config = readFileSync(template, "utf8");
 for (const kind of kinds) {
-	const marker = `{{GENERATE:${kind}}}`;
-	if (!config.includes(marker)) {
-		throw new Error(`template is missing ${marker}`);
-	}
-	config = config.replaceAll(marker, secrets[kind]);
+  const marker = `{{GENERATE:${kind}}}`;
+  if (!config.includes(marker)) {
+    throw new Error(`template is missing ${marker}`);
+  }
+  config = config.replaceAll(marker, secrets[kind]);
 }
 
 writeFileSync(target, config);
