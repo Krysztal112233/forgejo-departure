@@ -1,0 +1,5 @@
+# Distribution image for container deployments: an init container copies
+# /theme into Forgejo's custom assets volume. alpine is only there for
+# sh + cp; the payload is the ~150KB theme built into dist/.
+FROM alpine:3
+COPY dist/ /theme/
