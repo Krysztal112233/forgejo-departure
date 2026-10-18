@@ -30,7 +30,7 @@ A one-shot init container copies it into a shared volume before Forgejo starts:
 ```yaml
 services:
   theme-init:
-    image: ghcr.io/Krysztal112233/forgejo-departure:v0.1.0 # pin a tag; :latest tracks newest
+    image: ghcr.io/Krysztal112233/forgejo-departure:v0.1.0 # pin a release; :latest tracks releases, :edge tracks main
     volumes:
       - forgejo-assets:/assets
     command: ["sh", "-c", "cp -rf /theme/. /assets/"]
